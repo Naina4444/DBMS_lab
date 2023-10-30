@@ -1,0 +1,10 @@
+import mysql.connector
+conn = mysql.connector.connect(host='localhost',password='NainaJha4@',user='root')
+mycursor=conn.cursor()
+mycursor.execute("insert into Assignment2.Exam_Table values (201, ‘2023-11-10’, ‘09:00 AM’, ‘Exam Hall A’);")
+mycursor.execute("insert into Assignment2.Exam_Table values (202, ‘2023-11-12’, ‘02:00 PM’, ‘Exam Hall B’);")
+mycursor.execute("insert into Assignment2.Exam_Table values (203, ‘2023-11-15’, ‘10:30 AM’, ‘Exam Hall C’);")
+mycursor.execute("insert into Assignment2.Exam_Table values (204, ‘2023-11-18’, ‘03:15 PM’, ‘Exam Hall D’);")
+mycursor.execute("insert into Assignment2.Exam_Table values (205, ‘2023-11-20’, ‘01:00 PM’, ‘Exam Hall E’);")
+conn.commit()
+conn.close()
